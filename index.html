@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="googlef0227e2f71fbab47.html">
     <meta charset="UTF-8">
-    <title>Cyril Almil D. Cordova</title>
+    <title>Cyril Almil D. Cordova - Official Website</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Official website of Cyril Almil D. Cordova. Forest-themed personal homepage featuring microcontrollers and Cagayan de Oro City seal.">
+    <meta name="keywords" content="Cyril Almil D. Cordova, microcontrollers, Arduino, ESP8266, Cagayan de Oro, Philippines">
+    <meta name="author" content="Cyril Almil D. Cordova">
+
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
-            height: 100vh;
             background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80') 
                         no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             color: white;
             text-shadow: 0 0 15px rgba(0,0,0,0.8);
             animation: fadeIn 2s ease-in-out;
         }
 
+        .center {
+            text-align: center;
+            padding-top: 80px;
+        }
+
         h1 {
             font-size: 60px;
             margin: 0;
-            padding: 0;
             animation: glow 3s infinite alternate;
         }
 
@@ -35,6 +39,30 @@
             background: rgba(0,0,0,0.4);
             padding: 10px 25px;
             border-radius: 10px;
+            display: inline-block;
+        }
+
+        section {
+            margin-top: 60px;
+            text-align: center;
+            background: rgba(0,0,0,0.5);
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .micro-list {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
         }
 
         @keyframes fadeIn {
@@ -46,29 +74,33 @@
             from { text-shadow: 0 0 10px #00ffcc; }
             to { text-shadow: 0 0 25px #00ffaa; }
         }
-
-        .button {
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: rgba(0,0,0,0.6);
-            border: 2px solid #00ffaa;
-            color: #00ffaa;
-            font-size: 20px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background: #00ffaa;
-            color: black;
-        }
     </style>
 </head>
-<body>
-    <h1>Cyril Almil D. Cordova</h1>
-    <p>Welcome to my forest-themed personal website.</p>
 
-    <div class="button">Explore</div>
+<body>
+    <div class="center">
+        <h1>Cyril Almil D. Cordova</h1>
+        <p>Welcome to my forest-themed personal website.</p>
+    </div>
+
+    <section>
+        <h2>Microcontrollers I Use</h2>
+        <div class="micro-list">
+            - Arduino UNO R4 WiFi<br>
+            - ESP8266<br>
+            - nRF24L01+ modules<br>
+            - E01-2G4M27D long-range module<br>
+            - Custom sensor projects (chronograph, wireless systems)
+        </div>
+    </section>
+
+    <section>
+        <h2>Cagayan de Oro City Seal</h2>
+        <p>City of Golden Friendship</p>
+
+        <!-- Your uploaded image -->
+        <img src="/attachments/tbM9WiRA2az4w1agav7mF.jpeg" alt="Cagayan de Oro City Seal">
+    </section>
+
 </body>
 </html>
