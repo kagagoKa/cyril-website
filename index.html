@@ -5,8 +5,8 @@
     <title>Cyril Almil D. Cordova - Official Website</title>
 
     <!-- SEO -->
-    <meta name="description" content="Official website of Cyril Almil D. Cordova. Animated forest-tech themed homepage featuring microcontrollers and the Cagayan de Oro City seal.">
-    <meta name="keywords" content="Cyril Almil D. Cordova, microcontrollers, Arduino, ESP8266, Cagayan de Oro, Philippines">
+    <meta name="description" content="Official website of Cyril Almil D. Cordova. Animated forest-tech themed homepage featuring bio, microcontrollers, social links, and the Cagayan de Oro City seal.">
+    <meta name="keywords" content="Cyril Almil D. Cordova, microcontrollers, Arduino, ESP8266, Cagayan de Oro, Philippines, bio, contact">
     <meta name="author" content="Cyril Almil D. Cordova">
 
     <style>
@@ -45,22 +45,17 @@
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
-
-            /* Clear neon glow */
             color: #e8fffb;
             text-shadow:
                 0 0 4px #00ffcc,
                 0 0 8px #00ffaa,
                 0 0 12px #00ffaa;
-
-            /* Animations */
             animation:
                 nameGlow 2.5s infinite alternate,
                 nameFloat 6s ease-in-out infinite,
                 nameWave 5s ease-in-out infinite;
         }
 
-        /* Glow pulse (clean + readable) */
         @keyframes nameGlow {
             from {
                 text-shadow:
@@ -78,21 +73,18 @@
             }
         }
 
-        /* Floating effect */
         @keyframes nameFloat {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
-        /* Hologram wave */
         @keyframes nameWave {
             0% { transform: rotateX(0deg); }
             50% { transform: rotateX(8deg); }
             100% { transform: rotateX(0deg); }
         }
 
-        /* MAIN TITLE CONTAINER */
         .center {
             text-align: center;
             padding-top: 80px;
@@ -131,6 +123,15 @@
             transition: 0.3s ease;
         }
 
+        /* BIO PHOTO */
+        .bio-photo {
+            width: 200px;
+            border-radius: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 25px rgba(0,255,200,0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
         /* MICROCONTROLLER LIST */
         .micro-list {
             font-size: 24px;
@@ -138,7 +139,7 @@
             animation: float 5s ease-in-out infinite;
         }
 
-        /* COOLER ALIGNED SEAL */
+        /* SEAL */
         .seal-box {
             display: flex;
             justify-content: center;
@@ -166,6 +167,26 @@
             border-radius: 15px;
         }
 
+        /* SOCIAL LINKS */
+        .social a {
+            color: #00ffcc;
+            font-size: 26px;
+            margin: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 15px #00ffaa;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            font-size: 22px;
+            line-height: 1.8;
+        }
+
         /* BASIC ANIMATIONS */
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes glowPulse { from { text-shadow: 0 0 15px #00ffcc; } to { text-shadow: 0 0 40px #00ffaa; } }
@@ -189,6 +210,21 @@
         <p>Welcome to my personal website.</p>
     </div>
 
+    <!-- BIO SECTION -->
+    <section>
+        <h2 style="animation: glowPulse 3s infinite alternate;">About Me</h2>
+
+        <!-- OPTIONAL PHOTO -->
+        <img class="bio-photo" src="https://i.imgur.com/4ZQZ4ZC.png" alt="Your Photo">
+
+        <p style="font-size:22px; max-width:700px;">
+            I am Cyril Almil D. Cordova, a tech enthusiast from Cagayan de Oro City.  
+            I build microcontroller projects, wireless systems, and custom sensors.  
+            I love combining nature-inspired design with modern technology.
+        </p>
+    </section>
+
+    <!-- MICROCONTROLLERS -->
     <section>
         <h2 style="animation: glowPulse 3s infinite alternate;">Microcontrollers I Use</h2>
         <div class="micro-list">
@@ -200,6 +236,29 @@
         </div>
     </section>
 
+    <!-- SOCIAL LINKS -->
+    <section>
+        <h2 style="animation: glowPulse 3s infinite alternate;">Social Links</h2>
+
+        <div class="social">
+            <a href="https://facebook.com/">Facebook</a>
+            <a href="https://instagram.com/">Instagram</a>
+            <a href="https://youtube.com/">YouTube</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <h2 style="animation: glowPulse 3s infinite alternate;">Contact Me</h2>
+
+        <div class="contact-box">
+            Email: <strong>your-email@example.com</strong><br>
+            Location: Cagayan de Oro City, Philippines<br>
+            Message me anytime for collaborations or projects.
+        </div>
+    </section>
+
+    <!-- CITY SEAL -->
     <section>
         <h2 style="animation: glowPulse 3s infinite alternate;">Cagayan de Oro City Seal</h2>
         <p>City of Golden Friendship</p>
