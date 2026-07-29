@@ -5,7 +5,7 @@
     <title>Cyril Almil D. Cordova - Official Website</title>
 
     <!-- SEO -->
-    <meta name="description" content="Official website of Cyril Almil D. Cordova. Forest-tech themed homepage featuring microcontrollers and the Cagayan de Oro City seal.">
+    <meta name="description" content="Official website of Cyril Almil D. Cordova. Animated forest-tech themed homepage featuring microcontrollers and the Cagayan de Oro City seal.">
     <meta name="keywords" content="Cyril Almil D. Cordova, microcontrollers, Arduino, ESP8266, Cagayan de Oro, Philippines">
     <meta name="author" content="Cyril Almil D. Cordova">
 
@@ -18,69 +18,94 @@
                         no-repeat center center fixed;
             background-size: cover;
             color: white;
-            text-shadow: 0 0 15px rgba(0,0,0,0.8);
+            overflow-x: hidden;
             animation: fadeIn 2s ease-in-out;
         }
 
+        /* MAIN TITLE */
         .center {
             text-align: center;
             padding-top: 80px;
+            animation: slideDown 2s ease-out;
         }
 
         h1 {
-            font-size: 65px;
+            font-size: 70px;
             margin: 0;
-            animation: glow 3s infinite alternate;
+            animation: glowPulse 3s infinite alternate, float 6s ease-in-out infinite;
         }
 
         p {
-            font-size: 22px;
-            margin-top: 10px;
-            background: rgba(0,0,0,0.4);
-            padding: 10px 25px;
-            border-radius: 10px;
+            font-size: 24px;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.45);
+            padding: 12px 30px;
+            border-radius: 12px;
             display: inline-block;
+            animation: fadeIn 3s ease-in-out;
         }
 
+        /* SECTION BOXES */
         section {
             margin-top: 60px;
             text-align: center;
             background: rgba(0,0,0,0.55);
-            padding: 35px;
-            border-radius: 15px;
+            padding: 40px;
+            border-radius: 20px;
             width: 85%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 0 25px rgba(0,255,170,0.4);
+            box-shadow: 0 0 35px rgba(0,255,170,0.5);
+            animation: slideUp 2s ease-out;
         }
 
+        /* MICROCONTROLLER LIST */
         .micro-list {
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.8;
-            animation: float 4s ease-in-out infinite;
+            animation: float 5s ease-in-out infinite;
         }
 
+        /* IMAGE */
         img {
-            margin-top: 20px;
-            width: 220px;
-            border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,255,170,0.7);
+            margin-top: 25px;
+            width: 260px;
+            border-radius: 15px;
+            box-shadow: 0 0 35px rgba(0,255,170,0.9);
+            animation: glowPulse 3s infinite alternate, float 7s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
 
+        img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 45px rgba(0,255,200,1);
+        }
+
+        /* ANIMATIONS */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #00ffcc; }
-            to { text-shadow: 0 0 30px #00ffaa; }
+        @keyframes glowPulse {
+            from { text-shadow: 0 0 15px #00ffcc; }
+            to { text-shadow: 0 0 40px #00ffaa; }
         }
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-80px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(80px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
@@ -92,7 +117,7 @@
     </div>
 
     <section>
-        <h2>Microcontrollers I Use</h2>
+        <h2 style="animation: glowPulse 3s infinite alternate;">Microcontrollers I Use</h2>
         <div class="micro-list">
             - Arduino UNO R4 WiFi<br>
             - ESP8266<br>
@@ -103,11 +128,12 @@
     </section>
 
     <section>
-        <h2>Cagayan de Oro City Seal</h2>
+        <h2 style="animation: glowPulse 3s infinite alternate;">Cagayan de Oro City Seal</h2>
         <p>City of Golden Friendship</p>
 
-        <!-- Replace this with your GitHub image link -->
-        <img src="https://github.com/kagagoKa/cyril-website/blob/1b09c012e589721f6eb6aeced00242d1daca8323/CityHall.jpg" alt="Cagayan de Oro City Seal">
+        <!-- Your GitHub image link -->
+        <img src="https://github.com/kagagoKa/cyril-website/blob/1b09c012e589721f6eb6aeced00242d1daca8323/CityHall.jpg?raw=true" 
+             alt="Cagayan de Oro City Seal">
     </section>
 
 </body>
