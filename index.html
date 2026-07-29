@@ -22,6 +22,22 @@
             animation: fadeIn 2s ease-in-out;
         }
 
+        /* FLOATING PARTICLES */
+        .particle {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: rgba(0,255,200,0.7);
+            border-radius: 50%;
+            animation: drift 12s infinite linear;
+            filter: blur(2px);
+        }
+
+        @keyframes drift {
+            from { transform: translateY(0) translateX(0); opacity: 1; }
+            to { transform: translateY(-800px) translateX(200px); opacity: 0; }
+        }
+
         /* MAIN TITLE */
         .center {
             text-align: center;
@@ -57,6 +73,14 @@
             margin-right: auto;
             box-shadow: 0 0 35px rgba(0,255,170,0.5);
             animation: slideUp 2s ease-out;
+            border: 2px solid rgba(0,255,170,0.4);
+        }
+
+        section:hover {
+            box-shadow: 0 0 55px rgba(0,255,200,0.9);
+            border-color: rgba(0,255,200,1);
+            transform: scale(1.02);
+            transition: 0.3s ease;
         }
 
         /* MICROCONTROLLER LIST */
@@ -111,6 +135,14 @@
 </head>
 
 <body>
+
+    <!-- PARTICLES -->
+    <div class="particle" style="top:90%; left:10%; animation-delay:0s;"></div>
+    <div class="particle" style="top:95%; left:40%; animation-delay:2s;"></div>
+    <div class="particle" style="top:92%; left:70%; animation-delay:4s;"></div>
+    <div class="particle" style="top:98%; left:20%; animation-delay:6s;"></div>
+    <div class="particle" style="top:94%; left:80%; animation-delay:8s;"></div>
+
     <div class="center">
         <h1>Cyril Almil D. Cordova</h1>
         <p>Welcome to my personal website.</p>
@@ -131,7 +163,6 @@
         <h2 style="animation: glowPulse 3s infinite alternate;">Cagayan de Oro City Seal</h2>
         <p>City of Golden Friendship</p>
 
-        <!-- Your GitHub image link -->
         <img src="https://github.com/kagagoKa/cyril-website/blob/1b09c012e589721f6eb6aeced00242d1daca8323/CityHall.jpg?raw=true" 
              alt="Cagayan de Oro City Seal">
     </section>
