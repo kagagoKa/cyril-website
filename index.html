@@ -38,51 +38,57 @@
             to { transform: translateY(-800px) translateX(200px); opacity: 0; }
         }
 
-        /* COOL NAME */
+        /* CLEAR + COOL NAME */
         .cool-name {
-            font-size: 85px;
+            font-size: 95px;
             margin: 0;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: #00ffcc;
+
+            /* Clear neon glow */
+            color: #e8fffb;
             text-shadow:
-                0 0 10px #00ffcc,
-                0 0 20px #00ffaa,
-                0 0 40px #00ffaa,
-                0 0 80px #00ffaa;
+                0 0 4px #00ffcc,
+                0 0 8px #00ffaa,
+                0 0 12px #00ffaa;
+
+            /* Animations */
             animation:
-                nameGlow 3s infinite alternate,
+                nameGlow 2.5s infinite alternate,
                 nameFloat 6s ease-in-out infinite,
                 nameWave 5s ease-in-out infinite;
         }
 
+        /* Glow pulse (clean + readable) */
         @keyframes nameGlow {
             from {
                 text-shadow:
-                    0 0 10px #00ffcc,
-                    0 0 20px #00ffaa,
-                    0 0 40px #00ffaa;
-                color: #00ffcc;
+                    0 0 4px #00ffcc,
+                    0 0 8px #00ffaa,
+                    0 0 12px #00ffaa;
+                color: #d8fff9;
             }
             to {
                 text-shadow:
-                    0 0 20px #00ffaa,
-                    0 0 40px #00ffcc,
-                    0 0 80px #00ffcc;
-                color: #00ffaa;
+                    0 0 6px #00ffaa,
+                    0 0 14px #00ffcc,
+                    0 0 20px #00ffcc;
+                color: #ffffff;
             }
         }
 
+        /* Floating effect */
         @keyframes nameFloat {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-18px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
+        /* Hologram wave */
         @keyframes nameWave {
             0% { transform: rotateX(0deg); }
-            50% { transform: rotateX(12deg); }
+            50% { transform: rotateX(8deg); }
             100% { transform: rotateX(0deg); }
         }
 
