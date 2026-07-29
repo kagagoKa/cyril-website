@@ -5,7 +5,7 @@
     <title>Cyril Almil D. Cordova - Official Website</title>
 
     <!-- SEO -->
-    <meta name="description" content="Official website of Cyril Almil D. Cordova. Forest-themed personal homepage featuring microcontrollers and Cagayan de Oro City seal.">
+    <meta name="description" content="Official website of Cyril Almil D. Cordova. Forest-tech themed homepage featuring microcontrollers and the Cagayan de Oro City seal.">
     <meta name="keywords" content="Cyril Almil D. Cordova, microcontrollers, Arduino, ESP8266, Cagayan de Oro, Philippines">
     <meta name="author" content="Cyril Almil D. Cordova">
 
@@ -28,7 +28,7 @@
         }
 
         h1 {
-            font-size: 60px;
+            font-size: 65px;
             margin: 0;
             animation: glow 3s infinite alternate;
         }
@@ -45,24 +45,26 @@
         section {
             margin-top: 60px;
             text-align: center;
-            background: rgba(0,0,0,0.5);
-            padding: 30px;
+            background: rgba(0,0,0,0.55);
+            padding: 35px;
             border-radius: 15px;
-            width: 80%;
+            width: 85%;
             margin-left: auto;
             margin-right: auto;
+            box-shadow: 0 0 25px rgba(0,255,170,0.4);
         }
 
         .micro-list {
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.8;
+            animation: float 4s ease-in-out infinite;
         }
 
         img {
             margin-top: 20px;
-            width: 200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+            width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,255,170,0.7);
         }
 
         @keyframes fadeIn {
@@ -72,7 +74,13 @@
 
         @keyframes glow {
             from { text-shadow: 0 0 10px #00ffcc; }
-            to { text-shadow: 0 0 25px #00ffaa; }
+            to { text-shadow: 0 0 30px #00ffaa; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
         }
     </style>
 </head>
@@ -80,7 +88,7 @@
 <body>
     <div class="center">
         <h1>Cyril Almil D. Cordova</h1>
-        <p>Welcome to my forest-themed personal website.</p>
+        <p>Welcome to my forest-tech themed personal website.</p>
     </div>
 
     <section>
@@ -98,8 +106,8 @@
         <h2>Cagayan de Oro City Seal</h2>
         <p>City of Golden Friendship</p>
 
-        <!-- Your uploaded image -->
-        <img src="/attachments/tbM9WiRA2az4w1agav7mF.jpeg" alt="Cagayan de Oro City Seal">
+        <!-- Replace this with your GitHub image link -->
+        <img src="YOUR-GITHUB-IMAGE-LINK" alt="Cagayan de Oro City Seal">
     </section>
 
 </body>
