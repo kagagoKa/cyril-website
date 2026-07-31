@@ -1,10 +1,10 @@
-name: Update Lotto JSON
+name: Auto Update Lotto JSON
 
 on:
   schedule:
-    - cron: "0 14 * * *"   # 2PM Philippine time
-    - cron: "0 21 * * *"   # 9PM Philippine time
-  workflow_dispatch:
+    - cron: "0 14 * * *"   # every day at 2PM UTC (adjust for PH time)
+    - cron: "0 21 * * *"   # every day at 9PM UTC
+  workflow_dispatch:        # allow manual trigger
 
 jobs:
   update-json:
@@ -15,7 +15,8 @@ jobs:
 
       - name: Update lotto.json
         run: |
-          echo '{ "result": "XX-YY-ZZ", "date": "$(date +%Y-%m-%d)", "draw": "2PM" }' > lotto.json
+          # Replace this with a scraper later
+          echo '{ "result": "XX-YY-ZZ", "date": "$(date +%Y-%m-%d)", "draw": "AUTO" }' > lotto.json
 
       - name: Commit changes
         run: |
